@@ -8,7 +8,7 @@ To be determined
 
 <br>Click to view working project wireframe
 <a href="https://www.figma.com/file/UupxxFQW8aS4RbZh7oCZKN/Untitled?node-id=0%3A1" width="100px">
-<img align="center" src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/mplogotranssmall.png" width="100px"></a>
+<img align="center" src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/wow.gif" width="100px"></a>
 
 <summary>
 CURRENT TODO LIST:
@@ -30,5 +30,11 @@ I need to track my emotional state
 So that I can find patterns and better structure my schedule around my disorder.
 ```
 
+#### Technologies
+<ul>
+  <li>github</li>
+  <li>figma</li>
+  <li>vsCode</li>
+ </ul>
 
 
