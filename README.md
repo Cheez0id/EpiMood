@@ -9,14 +9,14 @@ To be determined
 <br>Click to view working project wireframe
 <a href="https://www.figma.com/file/UupxxFQW8aS4RbZh7oCZKN/Untitled?node-id=0%3A1" width="100px">
 <img align="center" src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/wow.gif" width="100px"></a>
-
+<details>
 <summary>
 CURRENT TODO LIST:
 </summary>
 <p><ul>
-<li>- [ ] Planning and wireframe</li>
-<li>- [ ] Planning and wireframe</li>
-<li>- [ ] Planning and wireframe</li>
+<li>- [ ] Concept notes</li>
+<li>- [ ] Wireframe</li>
+<li>- [ ] Technologies Research</li>
 </ul>
 </p>
 </details>
