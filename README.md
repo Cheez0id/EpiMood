@@ -30,5 +30,11 @@ I need to track my emotional state
 So that I can find patterns and better structure my schedule around my disorder.
 ```
 
+#### Technologies
+<ul>
+  <li>github</li>
+  <li>figma</li>
+  <li>vsCode</li>
+ </ul>
 
 
