@@ -21,6 +21,7 @@ CURRENT TODO LIST:
 </p>
 </details>
 
+![figma](https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/initilaFigma.JPG)
 
 ## User Story
 
