@@ -6,9 +6,11 @@ A personal project to create a full-stack app to track mood disorder activity.
 ## Installation
 To be determined
 
-[![Figma](https://myoctocat.com/assets/images/base-octocat.svg)](./assets/images/mpart2.png) <summary>
+[![Figma](./assets/images/mpart2.png)](https://www.figma.com/file/UupxxFQW8aS4RbZh7oCZKN/Untitled?node-id=0%3A1) 
 
-CURRENT TODO LIST:</summary>
+<summary>
+CURRENT TODO LIST:
+</summary>
 <p><ul>
 <li>- [ ] Planning and wireframe</li>
 <li>- [ ] Planning and wireframe</li>
