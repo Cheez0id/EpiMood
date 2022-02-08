@@ -3,6 +3,15 @@ A personal project to create a full-stack app to track mood disorder activity.
 
 <img align="right" img src="https://raw.githubusercontent.com/Cheez0id/MaryLeePrince-portfolio1/main/assets/images/reggi27.png" width="100px">
 
+## User Story
+
+```md
+As a person with PMDD
+I need to track my emotional state
+So that I can find patterns and better structure my schedule around my disorder.
+```
+
+
 ## Installation
 To be determined
 <br>
@@ -24,13 +33,6 @@ Click to view working project wireframe
 
 ![figma](https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/initilaFigma.JPG)
 
-## User Story
-
-```md
-As a person with PMDD
-I need to track my emotional state
-So that I can find patterns and better structure my schedule around my disorder.
-```
 
 #### Technologies
 <ul>
