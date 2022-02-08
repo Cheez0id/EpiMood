@@ -6,9 +6,7 @@ A personal project to create a full-stack app to track mood disorder activity.
 ## Installation
 To be determined
 
-<br>Click to view working project wireframe
-<a href="https://www.figma.com/file/UupxxFQW8aS4RbZh7oCZKN/Untitled?node-id=0%3A1" width="100px">
-<img align="center" src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/wow.gif" width="100px"></a>
+
 <details>
 <summary>
 CURRENT TODO LIST:
@@ -20,7 +18,9 @@ CURRENT TODO LIST:
 </ul>
 </p>
 </details>
-
+<br>Click to view working project wireframe
+<a href="https://www.figma.com/file/UupxxFQW8aS4RbZh7oCZKN/Untitled?node-id=0%3A1" width="100px">
+<img align="center" src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/wow.gif" width="100px"></a>
 ![figma](https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/initilaFigma.JPG)
 
 ## User Story
