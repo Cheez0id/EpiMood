@@ -2,7 +2,7 @@
 A personal project to create a full-stack app to track mood disorder activity.
 This must be a full-stack app, so there will be a clean and intuitive UI, functional code Application Programming Interface, and well-structured database.
 
-<img align="right" img src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/epiMoodLogo.png" width="200px"><br>
+<a href="https://www.google.com/search?q=pmdd&sxsrf=APq-WBv4hOfrVisgLqJwlPw1_EsP_xw2SQ%3A1644438460458&source=hp&ei=vCMEYrrfGc-MwbkPnP69oA0&iflsig=AHkkrS4AAAAAYgQxzH4RIrWXhmMbMxcJADM7rHHsPkMu&ved=0ahUKEwi6rafSuvP1AhVPRjABHRx_D9QQ4dUDCAo&uact=5&oq=pmdd&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECcyCAgAEIAEELEDMgsIABCABBCxAxCDATIFCAAQgAQyBQgAEIAEMgsIABCABBCxAxCDATIICAAQgAQQsQMyBQgAEIAEMggIABCABBCxAzIFCAAQgAQ6BwgjEOoCECc6CwguEIAEEMcBEKMCOg4ILhCABBCxAxDHARCjAjoECAAQQzoOCC4QgAQQsQMQxwEQ0QM6CAguEIAEELEDOgcIABCxAxBDOg0ILhCxAxDHARCjAhBDOgcILhCxAxBDOgoIABCxAxCDARBDUOIDWNMHYKUIaAFwAHgAgAFWiAGdApIBATSYAQCgAQGwAQo&sclient=gws-wiz"><img align="right" img src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/epiMoodLogo.png" width="200px"></a><br>
 
 ## User Story
 
