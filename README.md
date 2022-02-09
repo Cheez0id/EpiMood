@@ -1,5 +1,6 @@
 # EpiMood
 A personal project to create a full-stack app to track mood disorder activity.
+This must be a full-stack app, so there will be a clean and intuitive UI, functional code Application Programming Interface, and well-structured database.
 
 <img align="right" img src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/epiMoodLogo.png" width="200px"><br>
 
