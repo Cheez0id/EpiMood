@@ -6,11 +6,11 @@ This must be a full-stack app, so there will be a clean and intuitive UI, functi
 
 ## User Story
 
-```md
-As a person with PMDD
-I need to track my emotional state
-So that I can find patterns and better structure my schedule around my disorder.
-```
+
+As a person with PMDD<br>
+I need to track my emotional state<br>
+So that I can find patterns and better structure my schedule around my disorder.<br>
+
 
 
 ## Installation
