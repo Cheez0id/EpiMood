@@ -27,7 +27,7 @@ CURRENT TODO LIST:
 </p>
 </details>
 
-Click to view working project wireframe
+Click to view working fig-ma
 <a href="https://www.figma.com/file/UupxxFQW8aS4RbZh7oCZKN/EpiMood?node-id=0%3A1">
 <img align="center" src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/wow.gif" width="100px"></a>
 
