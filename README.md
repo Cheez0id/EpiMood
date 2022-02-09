@@ -38,9 +38,10 @@ CURRENT TODO LIST:
 
 #### Technologies
 <ul>
-  <li>github</li>
+  <li>GitHub</li>
   <li>figma</li>
   <li>vsCode</li>
+  <li>Sequelize/MySql</li>
  </ul>
 
 
