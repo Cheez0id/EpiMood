@@ -21,7 +21,7 @@ To be determined
 CURRENT TODO LIST:
 </summary>
 <p><ul>
-<li>- [ ] Concept notes</li>
+<li>- [x] Concept notes</li>
 <li>- [ ] Wireframe</li>
 <li>- [ ] Technologies Research</li>
 </ul>
