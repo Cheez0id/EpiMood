@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Cheez0id/EpiMood#readme",
   "dependencies": {
     "dotenv": "^16.0.0",
+    "express": "^4.17.2",
     "mysql2": "^2.3.3",
     "sequelize": "^6.16.1"
   }

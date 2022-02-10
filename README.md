@@ -45,6 +45,7 @@ CURRENT TODO LIST:
   <li>vsCode</li>
   <li>Sequelize/MySql2</li>
   <li>dotEnv</li>
+  <li>express</li>
  </ul>
 
 

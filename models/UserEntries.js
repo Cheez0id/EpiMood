@@ -1,10 +1,13 @@
 //To connect to the database, you must create a Sequelize instance. 
 const { Model, DataTypes } = require ("sequelize");
 
+//connect to database
 const sequelize = require ("../config/connection")
 
+//this is a subclass of model
 class UserEntries extends Model {}
 
+//subclass created table with rows
 UserEntries.init(
   {
     id: {
@@ -38,4 +41,5 @@ UserEntries.init(
   }
 )
 
+//export the subclass/model
 module.exports = UserEntries;
