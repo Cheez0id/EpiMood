@@ -12,17 +12,29 @@ UserEntries.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+      unique: true,
     }, 
     date: {
       type: DataTypes.DATE,
       allowNull: false,
     },
+    time: {
+      type: DataTypes.TIME,
+      allowNull: false,
+    },
     mood: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      max: 6, 
+    },
+    episode: {
+      type: DataTypes.BOOLEAN,  
     },
     text: {
       type: DataTypes.TEXT,
+    },
+    makePivate: {
+      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
   },
