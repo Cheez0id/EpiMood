@@ -22,8 +22,9 @@ CURRENT TODO LIST:
 </summary>
 <p><ul>
 <li>- [x] Concept notes</li>
-<li>- [ ] Wireframe</li>
-<li>- [ ] Technologies Research</li>
+<li>- [x] DB Wireframe</li>
+<li>- [ ] Front-End Wireframe</li>
+<li>- [ ] Technologies Research (React)</li>
 </ul>
 </p>
 </details>
