@@ -1,9 +1,7 @@
 //create user, sO, and counselor tables
 
-const User = require('./UserEntries');
+const UserEntries = require('./UserEntries');
 
 module.exports = {
-  User,
-  SignificantOther,
-  Counselor,
+  UserEntries
  };

@@ -14,14 +14,6 @@ UserEntries.init(
       autoIncrement: true,
       unique: true,
     }, 
-    date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-    time: {
-      type: DataTypes.TIME,
-      allowNull: false,
-    },
     mood: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -33,7 +25,7 @@ UserEntries.init(
     text: {
       type: DataTypes.TEXT,
     },
-    makePivate: {
+    makePrivate: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
@@ -45,3 +37,5 @@ UserEntries.init(
     modelName: "UserEntries",
   }
 )
+
+module.exports = UserEntries;
