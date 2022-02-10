@@ -42,6 +42,7 @@ CURRENT TODO LIST:
   <li>figma</li>
   <li>vsCode</li>
   <li>Sequelize/MySql</li>
+  <li>dotEnv</li>
  </ul>
 
 
