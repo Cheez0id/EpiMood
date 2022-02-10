@@ -33,6 +33,8 @@ CURRENT TODO LIST:
 
 <a href="https://www.figma.com/file/UupxxFQW8aS4RbZh7oCZKN/EpiMood?node-id=0%3A1">
 `Wireframe Placeholder!-->`<img align="center" src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/initilaFigma.JPG" width="100px"></a>
+<a href="https://www.figma.com/file/UupxxFQW8aS4RbZh7oCZKN/EpiMood?node-id=0%3A1">
+<img align="center" src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/assets/images/dbStructure.JPG" width="100px"></a>
 
 
 
