@@ -26,7 +26,7 @@ const sequelize = process.env.JAWSDB_URL
   sequelize
   .authenticate()
   .then(() => {
-    console.log('Connection has been established successfully.');
+    console.log('Connected to the App Database!');
   })
   .catch(err => {
     console.error('Unable to connect to the database:', err);
