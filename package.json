@@ -1,0 +1,25 @@
+{
+  "name": "epimood",
+  "version": "1.0.0",
+  "description": "A personal project to create a full-stack app to track mood disorder activity. This must be a full-stack app, so there will be a clean and intuitive UI, functional code Application Programming Interface, and well-structured database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cheez0id/EpiMood.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cheez0id/EpiMood/issues"
+  },
+  "homepage": "https://github.com/Cheez0id/EpiMood#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.16.1"
+  }
+}
