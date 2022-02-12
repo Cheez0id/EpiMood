@@ -1,21 +1,21 @@
-// const { UserEntries } = require('../models');
+const { UserEntries } = require('../models');
 
 const router = require('express').Router();
 
-// primary Trying to make routes modularized; 
-// const testGet= () =>{
-//   router.get('/', async(req, res) => {
-//     UserEntries.findAll().then((userData) => {
-//       console.log(userData);
-//       res.json(userData)
-//     });
-//     res.render('all')  
-//   })
-// }
-
-// testGet();
 
 // BELOW IS ME LEARNING/STUDYING
+//this will successfully get all the data from the database and return it as a json when you go to localhost:3001/alldata.  What I want to do is be able to route through the modularized files.
+const getAll= () =>{
+  router.get('/alldata', async(req, res) => {
+    UserEntries.findAll().then((userData) => {
+      console.log(userData);
+      res.json(userData)
+    });    
+  })
+}
+
+getAll();
+
 
 //very simple get request.
 //respond with "hello world" when a GET request is made to the /test route

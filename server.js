@@ -21,7 +21,7 @@ app.use(require('./controllers'));
 //Connecting to the database
 
 
-sequelize.sync({force:true}).then(()=> {
+sequelize.sync({force:false}).then(()=> {
   app.listen(PORT, ()=> {
     console.log(`helloooo!!! it's workin ${PORT}`);
   });
