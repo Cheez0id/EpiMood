@@ -1,17 +1,24 @@
-var express = require('express');
-var router = express.Router();
+const { UserEntries } = require('../models');
+const router = require('express').Router();
 
 // primary Trying to make routes modularized; 
-const getAll= () =>{
-  router.get('/alldata', async(req, res) => {
+
+ router.get('/alldata', async(req, res) => {
     UserEntries.findAll().then((userData) => {
       console.log(userData);
       res.json(userData)
     });    
   })
-}
 
-getAll();
+  router.get('/thingy', async(req, res) => {
+    UserEntries.findAll().then((userData) => {
+      console.log(userData);
+      res.json(userData)
+    });    
+  })
+
 
 
 module.exports = router;
+
+
