@@ -11,7 +11,7 @@ As a person with PMDD<br>
 I need to track my emotional state<br>
 So that I can find patterns and better structure my schedule around my disorder.<br>
 
-
+<img align="right" src="https://cdn.discordapp.com/attachments/118377491982319623/942094352497393664/reminder-to-take-your-meds-medication.gif" width="200px"><br>
 
 ## Installation
 To be determined
