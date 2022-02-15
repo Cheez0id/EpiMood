@@ -5,15 +5,22 @@ const router = require('express').Router();
 
  router.get('/alldata', async(req, res) => {
     UserEntries.findAll().then((userData) => {
-      console.log(userData);
+      console.log("Gotta Catch 'Em All!");
       res.json(userData)
     });    
   })
 
-  router.get('/thingy', async(req, res) => {
-    UserEntries.findAll().then((userData) => {
-      console.log(userData);
-      res.json(userData)
+
+
+  router.post('/thingy', async(req, res) => {
+    UserEntries.create({
+      mood: 3,
+      episode: true,
+      text: 'This is a new entry',
+      makePrivate: true
+    }).then((newEntry) => {
+      console.log("making a new entry");
+      res.json(newEntry)
     });    
   })
 

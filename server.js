@@ -5,7 +5,7 @@ const sequelize = require("./config/connection");
 const controllers = require("./controllers");
 
 const path = require("path");
-const getAll = require("./controllers/alldata");
+const getAll = require("./controllers/entries");
 //make express the app
 const app = express();
 //port 80 is for heroku (i believe) but we will keep 3001 for now
