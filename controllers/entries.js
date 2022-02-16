@@ -6,9 +6,10 @@ const router = require("express").Router();
 let episodes = {where: {
   episode: true,
   }}
-//TODO:user should be able to enter in a number (1-6)  
+//TODO:user should be able to enter in a number (1-6); RIGHT NOW 3 IS HARDCODED
+let moodNumber=3;
 let mood = {where: {
-  mood: 3,
+  mood: moodNumber,
   }}  
 
 
@@ -34,39 +35,43 @@ router.get("/allData/episodes", async (req, res) => {
 });
 
 //shows a list of entries with moods
-router.get("/allData/mood", async (req, res) => {
+router.get("/allData/mood/", async (req, res) => {
 	UserEntries.findAll(mood).then((entryData) => {
-		console.log("Found episodes!");
+		console.log("Found moods!");
 		res.json(entryData);
 	});
 });
 
-//Creates a new entry with specified values (TODO:make it so that the user can put whatever they want)
+//Creates a new entry with specified values (TODO:make it so that the user can put whatever they want;RIGHT NOW THE REQ.BODY.INPUTS AREN'T ANYTHING, AND YEAH. NEED TO MAKE THEM THINGS.)
 router.post("/newEntry", async (req, res) => {
 	UserEntries.create({
-		mood: 3,
-		episode: true,
-		text: "This is another new entry",
-		makePrivate: true,
+		mood: req.body.moodInput,
+		episode: req.body.episodeInput,
+		text: req.body.textInput,
+		makePrivate: req.body.makePivateInput,
 	}).then((newEntry) => {
 		console.log("making a new entry");
 	});
 });
 
+
+// let variablee= `2022-02-15T23:23:28.000Z`;
+
 //Updates a specific entry with a specified value (TODO: make it so that the user can select a specific entry and update different values)
 router.put("/editEntry", async (req, res) => {
+  let variablee = "2022-02-15"+"T23:23:28.000Z"
   UserEntries.update({ 
-    text: 'a very different text update RETURNS THE SEQUEL'
+    text: 'a very different text update RETURNS THE SEQUELBOB MAKES HIS ESCAPE WITH SANTA'
    },
    {
     where: {
-      createdAt: `2022-02-15T23:23:28.000Z`
+      createdAt: `${variablee}`,
     }
-	}).then(
+	})
     UserEntries.findAll().then((userData) => {
       console.log("showing them all to you with updates!")
       res.json(userData)})
-    );
+
 });
 
 //Destroys a specified entry by ID (TODO: Make it so that the user can specify which entry to destroy)
