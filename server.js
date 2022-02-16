@@ -9,7 +9,7 @@ const getAll = require("./controllers/entries");
 //make express the app
 const app = express();
 //port 80 is for heroku (i believe) but we will keep 3001 for now
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 80;
 
 //tells express to use the routes set up in controllers!! I figured this out on my owwwwnnnnn!!!
 app.use(require("./controllers"));
