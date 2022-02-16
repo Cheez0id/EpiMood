@@ -1,6 +1,7 @@
 module.exports = {
   content: [
-    './public/index.html'
+    './index.html',
+    '../public/index.html',
   ],
   theme: {
     screens: {
@@ -21,8 +22,9 @@ module.exports = {
       'gray-light': '#d3dce6',
     },
     fontFamily: {
-      mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace';],
-      
+      sans: ['Graphik', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+      mono: ["Courier New", 'monospace']
     },
     extend: {
       spacing: {
