@@ -47,6 +47,8 @@ CURRENT TODO LIST:
   <li>Sequelize/MySql2</li>
   <li>dotEnv</li>
   <li>express</li>
+  <li>React</li>
+  <li>tailwind</li>
  </ul>
 
 
