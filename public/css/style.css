@@ -4,10 +4,6 @@
 
 @tailwind utilities;
 
-*{
-	font-family: "Courier New", Courier, monospace;
-	flex: auto;
-}
 
 .centerText{
 	text-align: center;
@@ -15,9 +11,12 @@
 
 body {
   background-color: rgb(5, 14, 53);
+	font-family: "Courier New", Courier, monospace;
 }
 
 .box {
+	font-family: "Courier New", Courier, monospace;
+	flex: auto;
   float: none;
   margin-left: 25px;
 	margin-right: 25px;
@@ -26,6 +25,10 @@ body {
 	border: 5px solid rgb(177, 174, 143);
 	border-radius: 8%;
 	padding: 25px;
-  background-color: indigo;
-  
+  background-color: indigo; 
+}
+
+footer {
+	font-family: "Courier New", Courier, monospace;
+	flex: auto;
 }
