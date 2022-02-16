@@ -4,7 +4,7 @@
 
 @tailwind utilities;
 
-* {
+*{
 	font-family: "Courier New", Courier, monospace;
 	flex: auto;
 }
@@ -13,51 +13,19 @@
 	text-align: center;
 }
 
+body {
+  background-color: rgb(5, 14, 53);
+}
 
 .box {
-	margin-left: 25px;
+  float: none;
+  margin-left: 25px;
 	margin-right: 25px;
 	margin-top: 25px;
 	margin-bottom: 10px;
-	border: 5px solid rgb(83, 52, 133);
+	border: 5px solid rgb(177, 174, 143);
 	border-radius: 8%;
 	padding: 25px;
-}
-
-.card {
-	background-color: rgba(71, 170, 139, 0.637);
-
-}
-
-.previous {
-	background-color: rgba(71, 170, 139, 0.637);
-
-}
-
-.grey 
-{background-color: grey;}
-.green 
-{background-color: green;}
-.yellow 
-{background-color: yellow;}
-.orange 
-{background-color: orange;}
-.red 
-{color: white;
-	background-color: red;}
-.black 
-{color: white;
-	background-color: black
-}
-
-#uvInfo
-{ height: 5px;
-	width: 5px;
-	margin-left: 25px;
-	margin-right: 25px;
-	margin-top: 25px;
-	margin-bottom: 10px;
-	border: 5px solid rgb(83, 52, 133);
-	border-radius: 8%;
-	padding: 25px;
+  background-color: indigo;
+  
 }

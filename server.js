@@ -24,11 +24,9 @@ app.use(express.urlencoded({ extended: true }));
 // app.use("/api", controllers);
 
 //to set default root folder to 'public' (dont need this yet)
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.static(path.join(__dirname,'public')));
-
-
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname,'public')));
 
 //Connecting to the database
 sequelize.sync({ force: false }).then(() => {

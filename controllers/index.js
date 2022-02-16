@@ -4,21 +4,23 @@ const express = require('express');
 const getAll = require('./entries');
 const app = express();
 const getAllRoute = require('./entries');
-
+const path=require('path');
 
 //This was the piece we needed! we are using the express method to use the root route and call to the ./alldata file to do the get requests based on the routes specified in those requests over there in ./alldata
 router.use('/', getAllRoute)
 
 
 
+
 //very simple get request.
 //respond with "hello world" when a GET request is made to the /test route
 router.get('/', function (req, res) {
-  res.send('hello world')
+  res.sendFile('pages/index.html', { root: path.join(__dirname, '../public') })
   console.log("testing this out")
   // next()
   // console.log("what does next do?")
 })
+
 
 
 
