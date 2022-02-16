@@ -13,7 +13,7 @@ let mood = {where: {
   }}  
 
 
-//TODO: need to get values from user inputs from forms for the POST to create new entries
+//TODO: need to get values from user inputs from forms ON FRONTEND for the POST to create new entries
 
 //--------------------
 // Routes for a RESTful API!!

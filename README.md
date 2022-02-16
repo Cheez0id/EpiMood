@@ -44,12 +44,14 @@ CURRENT TODO LIST:
 #### Technologies
 <ul>
   <li>GitHub</li>
-  <li>figma</li>
+  <li>Figma</li>
   <li>vsCode</li>
   <li>Sequelize/MySql2</li>
   <li>dotEnv</li>
-  <li>express</li>
-  <li>tailwind</li>
+  <li>Express</li>
+  <li>Tailwind</li>
+  <li>Heroku</li>
+  <li>JawsDB</li>
  </ul>
 
 
