@@ -17,16 +17,15 @@
 		<div>
       
 			<header class="box text-5xl px-6 pt-10 pb-8 shadow-xl sm:max-w-3xl sm:mx-auto  my-7 centerText text-violet-200 flex">
-        <img class="centerText" src="../assets/images/epiMoodLogo3.png" width=300px alt="logo">
-      <!-- <img class = "float-right" src="/assets/images/epiMoodLogo3.png" width=300px alt="logo"> -->
-        <p>Tracking for Emotional Health</p>
+        <img src="/assets/images/epiMoodLogo3.png" width=300px alt="logo">
+         <p>Tracking for Emotional Health</p>
 			</header>
 		</div>
     <div class="box px-6 pt-10 pb-8 shadow-xl sm:max-w-3xl sm:mx-auto">
      
-      <form>
+  
         <!-- <form action="/action_page.php"> -->
-         <form>
+         <form id="moodForm">
          <input type="radio" id="joyful" name="moodToday" value=1>
          <label for="joyful">Joyful</label><br>
          <input type="radio" id="powerful" name="moodToday"  value=2>
@@ -41,8 +40,7 @@
          <label for="scared">Scared</label><br>
          <input type="submit" value="Submit" id="submitMood">
           </form> 
-
-      </form>
+    <div id="result"></div>
 
     </div>
 
