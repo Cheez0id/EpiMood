@@ -14,6 +14,8 @@ let mood = {where: {
 
 
 //TODO: need to get values from user inputs from forms ON FRONTEND for the POST to create new entries
+//TODO: HOW DO I SEED THE DATABASE IN HEROKU???
+
 
 //--------------------
 // Routes for a RESTful API!!

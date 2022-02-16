@@ -1,7 +1,6 @@
 //express.router allows us to set up initial endpoints and any file/folder attached to it after will have that prefix to the url
 const router = require('express').Router();
 const express = require('express');
-const getAll = require('./entries');
 const app = express();
 const getAllRoute = require('./entries');
 const path=require('path');
