@@ -15,6 +15,9 @@ module.exports = {
       display: ['Menlo', 'Courier New"'],
       body: ['Courier New"', 'monospace'],
     },
+    container: {
+      center: true,
+    },
     extend: {},
   },
   variants: {},
