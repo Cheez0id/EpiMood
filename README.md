@@ -24,7 +24,7 @@ CURRENT TODO LIST:
 <li>- [x] Concept notes</li>
 <li>- [x] DB Wireframe</li>
 <li>- [ ] Front-End Wireframe</li>
-<li>- [ ] Technologies Research (React)</li>
+<s><li>- [ ] Technologies Research (React)</li></s>
 </ul>
 </p>
 </details>
@@ -47,7 +47,6 @@ CURRENT TODO LIST:
   <li>Sequelize/MySql2</li>
   <li>dotEnv</li>
   <li>express</li>
-  <li>React</li>
   <li>tailwind</li>
  </ul>
 
