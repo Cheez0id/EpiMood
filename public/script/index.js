@@ -27,9 +27,14 @@ document
 		fetch("http://localhost:80/allData")
 			.then((response) => response.json())
 			// .then((data) => console.log(JSON.stringify(data)))
-			.then (function(data){document.getElementById("result").innerHTML
-			= (JSON.stringify(data))})
-	});
+			.then (function(data){
+				for (let i = 0; i < data.length; i++)
+			 	document.getElementById("result").innerHTML = data[i].text;
+				 console.log(data[0]);
+				 console.log(data)
+			});
+
+			});
 
 	//a test get request to get entries with mood set to '2'
 	document
