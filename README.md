@@ -25,6 +25,7 @@ CURRENT TODO LIST:
 <p><ul>
 <li>- [x] Concept notes</li>
 <li>- [x] DB Wireframe</li>
+<li>- [x] FIRST FULL-STACK BY MYSELF!</li>  
 <li>- [ ] Front-End Wireframe</li>
 <s><li>- [ ] Technologies Research (React)</li></s>
 </ul>
