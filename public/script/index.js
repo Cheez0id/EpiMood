@@ -18,7 +18,7 @@ document
 	});
 
 
-//attempting to put all entries on the page	
+//attempting to put all entries	
 document
 	.getElementById("viewAllEntries")
 	.addEventListener("click", function (event) {
@@ -26,8 +26,9 @@ document
 		console.log("you gonna see it all!");
 		fetch("http://localhost:80/allData")
 			.then((response) => response.json())
-			.then((data) => document.getElementById("result").innerHTML
-			= data);
+			// .then((data) => console.log(JSON.stringify(data)))
+			.then (function(data){document.getElementById("result").innerHTML
+			= (JSON.stringify(data))})
 	});
 
 //I would very much like to make a post request.
