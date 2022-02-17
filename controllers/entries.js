@@ -7,7 +7,7 @@ let episodes = {where: {
   episode: true,
   }}
 //TODO:user should be able to enter in a number (1-6); RIGHT NOW 3 IS HARDCODED
-let moodNumber=3;
+let moodNumber=2;
 let mood = {where: {
   mood: moodNumber,
   }}  
@@ -47,10 +47,10 @@ router.get("/allData/mood/", async (req, res) => {
 //Creates a new entry with specified values (TODO:make it so that the user can put whatever they want;RIGHT NOW THE REQ.BODY.INPUTS AREN'T ANYTHING, AND YEAH. NEED TO MAKE THEM THINGS.)
 router.post("/newEntry", async (req, res) => {
 	UserEntries.create({
-		mood: req.body.moodInput,
-		episode: req.body.episodeInput,
-		text: req.body.textInput,
-		makePrivate: req.body.makePivateInput,
+		mood: 2,
+		episode: false,
+		text: "this is an example!!",
+		makePrivate: false,
 	}).then((newEntry) => {
 		console.log("making a new entry");
 	});

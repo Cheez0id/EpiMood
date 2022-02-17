@@ -31,6 +31,19 @@ document
 			= (JSON.stringify(data))})
 	});
 
+	//a test get request to get entries with mood set to '2'
+	document
+	.getElementById("viewAllMoods")
+	.addEventListener("click", function (event) {
+		event.preventDefault();
+		console.log("you gonna see it all!");
+		fetch("http://localhost:80/allData/mood")
+			.then((response) => response.json())
+			// .then((data) => console.log(JSON.stringify(data)))
+			.then (function(data){document.getElementById("result").innerHTML
+			= (JSON.stringify(data))})
+	});
+
 //I would very much like to make a post request.
 	// document
 	// .getElementById("createNewEntry")
