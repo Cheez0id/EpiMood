@@ -4,18 +4,21 @@
 
 
 
-	function displayRadioValue() {
-		var ele = document.getElementsByName('moodToday');
+function displayRadioValue() {
+		let ele = document.getElementsByName('moodToday');
 			for(i = 0; i < ele.length; i++) {
 				if(ele[i].checked)
 				document.getElementById("result").innerHTML
-								= "MoodToday: "+ele[i].value;
+								= "MoodToday: "+ele[i].value;	
+
 		}
 }
-
 
 document.getElementById("submitMood").addEventListener("click", function (event) {
 	event.preventDefault();
 	console.log("you clicked the form");
 	displayRadioValue();
+	fetch('http://localhost:80/allData')
+	.then(response=> response.json())
+	.then (data => console.log(data))
 	});
