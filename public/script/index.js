@@ -29,7 +29,10 @@ document
 			// .then((data) => console.log(JSON.stringify(data)))
 			.then (function(data){
 				for (let i = 0; i < data.length; i++)
-			 	document.getElementById("result").innerHTML = data[i].text;
+			 	document.getElementById("result").innerHTML = 
+				 `Today's Mood: ${data[i].mood} <br> 
+				 Note: ${data[i].text} <br>
+				 Private? ${data[i].makePrivate}`;
 				 console.log(data[0]);
 				 console.log(data)
 			});
