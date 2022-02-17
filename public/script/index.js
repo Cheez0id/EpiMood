@@ -18,7 +18,12 @@ document.getElementById("submitMood").addEventListener("click", function (event)
 	event.preventDefault();
 	console.log("you clicked the form");
 	displayRadioValue();
-	fetch('http://localhost:80/allData')
-	.then(response=> response.json())
-	.then (data => console.log(data))
 	});
+
+	document.getElementById("viewAllEntries").addEventListener("click", function (event) {
+		event.preventDefault();
+		console.log("you gonna see it all!");
+		fetch('http://localhost:80/allData')
+		.then(response=> response.json())
+		.then (data => console.log(data))
+		});
