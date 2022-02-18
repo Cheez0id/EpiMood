@@ -27,6 +27,8 @@ CURRENT TODO LIST:
 <li>- [x] DB Wireframe</li>
 <li>- [x] FIRST FULL-STACK BY MYSELF!</li>  
 <li>- [ ] Front-End Wireframe</li>
+ <li>- See more on Project Board</li>
+
 <s><li>- [ ] Technologies Research (React)</li></s>
 </ul>
 </p>
@@ -40,7 +42,8 @@ CURRENT TODO LIST:
 <a href="https://www.figma.com/file/UupxxFQW8aS4RbZh7oCZKN/EpiMood?node-id=0%3A1">
 <img align="center" src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/public/assets/images/dbStructure.JPG" width="100px"></a>
 
-
+## Notes
+This is an alpha iteration designed to be a browser app, but down the road I plan to make this offline-capable and more mobile-friendly.  There is so much opportunity for growth here, such as features akin to the Noom app including daily psychology-driven self improvement lessons, group chats, etc.  At the moment, it will essentially be a journal/tracker and that's what I'm working on.
 
 #### Technologies
 <ul>
