@@ -20,6 +20,12 @@ body {
 	border-radius: 8%;
   background-color: indigo; 
 }
+.card {
+	font-family: "Courier New", Courier, monospace;
+ 	border: 5px solid rgb(177, 174, 143);
+	border-radius: 8%;
+  background-color: indigo; 
+}
 
 footer {
 	font-family: "Courier New", Courier, monospace;

@@ -31,6 +31,7 @@ document
 			.then (function(data){
 				for (let i = 0; i < data.length; i++){
 					let entry = document.createElement("p")
+					entry.className="card"
 				entry.innerHTML= `Note: ${data[i].text} <br>`
 				 details.append(entry)}
 
