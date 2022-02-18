@@ -48,9 +48,9 @@ router.get("/allData/mood/", async (req, res) => {
 router.post("/newEntry", async (req, res) => {
 	UserEntries.create({
 		mood: 2,
-		episode: false,
-		text: "this is an example!!",
-		makePrivate: false,
+		episode: true,
+		text: "Today is a great day!",
+		makePrivate: true,
 	}).then((newEntry) => {
 		console.log("making a new entry");
 	});
