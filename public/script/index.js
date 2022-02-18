@@ -19,8 +19,7 @@ document
 
 
 //attempting to put all entries	
-const details =	document.getElementById("result");
-let entry = document.createElement("div");
+const details =	document.getElementById("result")
 document
 	.getElementById("viewAllEntries")
 	.addEventListener("click", function (event) {
@@ -30,8 +29,11 @@ document
 			.then((response) => response.json())
 			// .then((data) => console.log(JSON.stringify(data)))
 			.then (function(data){
-				for (let i = 0; i < data.length; i++)
-			 	details.innerHTML = `Note: ${data[i].text} <br>`
+				for (let i = 0; i < data.length; i++){
+					let entry = document.createElement("p")
+				entry.innerHTML= `Note: ${data[i].text} <br>`
+				 details.append(entry)}
+
 				//  `Today's Mood: ${data[i].mood} <br> 
 				 //  Private? ${data[i].makePrivate}`;
 				//  console.log(data[0]);
