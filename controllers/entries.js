@@ -94,29 +94,3 @@ router.delete("/deleteEntry", async (req, res) => {
 module.exports = router;
 
 
-// ------------------------------- IGNORE BELOW, IT'S REFERENCE CODE----------------------//
-
-// async function newFormHandler(event) {
-//   event.preventDefault();
-//   // Send fetch request to add a new dish
-//   const response = await fetch(`/api/dish`, {
-//     method: 'POST',
-//     body: JSON.stringify({
-//       dish_name,
-//       description,
-//       guest_name,
-//       has_nuts,
-//     }),
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   });
-//   //if the dish is added, the 'all' template will be rerendered
-//   if (response.ok) {
-//     document.location.replace('/');
-//   } else {
-//     alert('Failed to add dish');
-//   }
-// }
-
-// document.querySelector('.new-dish-form').addEventListener('submit', newFormHandler);
