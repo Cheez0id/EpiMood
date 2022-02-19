@@ -28,8 +28,8 @@ CURRENT TODO LIST:
 <li>- [x] FIRST FULL-STACK BY MYSELF!</li>  
 <li>- [ ] Front-End Wireframe</li>
  <li>- See more on Project Board</li>
-
-<s><li>- [ ] Technologies Research (React)</li></s>
+つ ◕_◕ ༽つ
+<li>- [ ] Technologies Research (React)</li>
 </ul>
 </p>
 </details>
