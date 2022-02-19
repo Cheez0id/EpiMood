@@ -1,14 +1,27 @@
-//this is just testing connection between this file and the index.html. how do I make this talk to tbe backend?
+// const express = require('express');
+// const app = express();
 
+//creating an onlonad event with a quick alert box
+window.onload = function () {
+	alert(
+		"!WARNING! This is a SAMPLE app! Anything that you submit is CURRENTLY VISIBLE TO THE PUBLIC!"
+	);
+};
+
+//The radio selection on the form; currently the function will loop through each radio named 'moodtoday' and will take the checked radio, then put the value into the result area below;
+//TODO: take the radio value and create a variable-? It needs to be able to go into the post function; moodvariable is already created, let's just use that
 function displayRadioValue() {
 	let ele = document.getElementsByName("moodToday");
 	for (i = 0; i < ele.length; i++) {
 		if (ele[i].checked)
 			document.getElementById("result").innerHTML =
 				"MoodToday: " + ele[i].value;
+				//this is me trying to export value
+		let moodNumber = ele[i].value;
 	}
 }
 
+//the below is not really necessary, it was just to make sure the radio works; however maybe we can use it to quickly show the user's most recent submission to the form instead of making another db call; "you submitted X"
 document
 	.getElementById("submitMood")
 	.addEventListener("click", function (event) {
@@ -17,9 +30,8 @@ document
 		displayRadioValue();
 	});
 
-
-//attempting to put all entries	
-const details =	document.getElementById("result")
+//Displays all DB entries as 'cards' on the page
+const details = document.getElementById("result");
 document
 	.getElementById("viewAllEntries")
 	.addEventListener("click", function (event) {
@@ -28,24 +40,24 @@ document
 		fetch("http://localhost:80/allData")
 			.then((response) => response.json())
 			// .then((data) => console.log(JSON.stringify(data)))
-			.then (function(data){
-				for (let i = 0; i < data.length; i++){
-					let entry = document.createElement("p")
-					entry.className="card"
-				entry.innerHTML= `Note: ${data[i].text} <br> Today's Mood: ${data[i].mood} <br> 
-				Private? ${data[i].makePrivate}`
-				 details.append(entry)}
+			.then(function (data) {
+				for (let i = 0; i < data.length; i++) {
+					let entry = document.createElement("p");
+					entry.className = "card";
+					entry.innerHTML = `Note: ${data[i].text} <br> Today's Mood: ${data[i].mood} <br> 
+				Private? ${data[i].makePrivate}`;
+					details.append(entry);
+				}
 
-				//  `Today's Mood: ${data[i].mood} <br> 
-				 //  Private? ${data[i].makePrivate}`;
+				//  `Today's Mood: ${data[i].mood} <br>
+				//  Private? ${data[i].makePrivate}`;
 				//  console.log(data[0]);
-				 console.log(data)
+				console.log(data);
 			});
+	});
 
-			});
-
-	//a test get request to get entries with mood set to '2'
-	document
+//a test get request to get entries with mood set to '2'
+document
 	.getElementById("viewAllMoods")
 	.addEventListener("click", function (event) {
 		event.preventDefault();
@@ -53,17 +65,21 @@ document
 		fetch("http://localhost:80/allData/mood")
 			.then((response) => response.json())
 			// .then((data) => console.log(JSON.stringify(data)))
-			.then (function(data){document.getElementById("result").innerHTML
-			= (JSON.stringify(data))})
+			.then(function (data) {
+				document.getElementById("result").innerHTML = JSON.stringify(data);
+			});
 	});
 
 //I would very much like to make a post request.
-	// document
-	// .getElementById("createNewEntry")
-	// .addEventListener("click", function (event) {
-	// 	event.preventDefault();
-	// 	console.log("We'll try and post something");
-	// 	fetch("http://localhost:80/newEntry")
-	// 		.then((response) => response.json())
-	// 		.then((data) => console.log(data));
-	// });
+// RESEARCH, DO WE DO A FETCH REQUEST TO POST TO DB
+document
+.getElementById("createNewEntry")
+.addEventListener("click", function (event) {
+	event.preventDefault();
+	console.log("We'll try and post something");
+	fetch('http://localhost:80/newEntry',
+	{method: 'POST'})});
+
+	
+
+// module.exports = { moodNumber };

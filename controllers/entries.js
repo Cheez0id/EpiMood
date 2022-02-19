@@ -1,5 +1,7 @@
 const { UserEntries } = require("../models");
 const router = require("express").Router();
+const sequelize=require('sequelize');
+// const formResults= require('../public/script/index');
 
 //setting up variables where user input will be put into the queries 
 //TODO: checkbox for episodes
@@ -7,6 +9,7 @@ let episodes = {where: {
   episode: true,
   }}
 //TODO:user should be able to enter in a number (1-6); RIGHT NOW 3 IS HARDCODED
+// let moodNumber=formResults.moodNumber;
 let moodNumber=2;
 let mood = {where: {
   mood: moodNumber,
@@ -14,8 +17,6 @@ let mood = {where: {
 
 
 //TODO: need to get values from user inputs from forms ON FRONTEND for the POST to create new entries
-//TODO: HOW DO I SEED THE DATABASE IN HEROKU???
-
 
 //--------------------
 // Routes for a RESTful API!!
@@ -47,9 +48,9 @@ router.get("/allData/mood/", async (req, res) => {
 //Creates a new entry with specified values (TODO:make it so that the user can put whatever they want;RIGHT NOW THE REQ.BODY.INPUTS AREN'T ANYTHING, AND YEAH. NEED TO MAKE THEM THINGS.)
 router.post("/newEntry", async (req, res) => {
 	UserEntries.create({
-		mood: 2,
+		mood: 6,
 		episode: true,
-		text: "Today is a great day!",
+		text: "OMG PIKACHU DID IT WORK?!",
 		makePrivate: true,
 	}).then((newEntry) => {
 		console.log("making a new entry");
@@ -91,3 +92,31 @@ router.delete("/deleteEntry", async (req, res) => {
 });
 
 module.exports = router;
+
+
+// ------------------------------- IGNORE BELOW, IT'S REFERENCE CODE----------------------//
+
+// async function newFormHandler(event) {
+//   event.preventDefault();
+//   // Send fetch request to add a new dish
+//   const response = await fetch(`/api/dish`, {
+//     method: 'POST',
+//     body: JSON.stringify({
+//       dish_name,
+//       description,
+//       guest_name,
+//       has_nuts,
+//     }),
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   });
+//   //if the dish is added, the 'all' template will be rerendered
+//   if (response.ok) {
+//     document.location.replace('/');
+//   } else {
+//     alert('Failed to add dish');
+//   }
+// }
+
+// document.querySelector('.new-dish-form').addEventListener('submit', newFormHandler);
