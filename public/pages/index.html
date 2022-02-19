@@ -18,7 +18,7 @@
       
 			<header class="box text-5xl px-6 pt-10 pb-8 shadow-xl sm:max-w-3xl sm:mx-auto  my-7 centerText text-violet-200 flex">
         <img src="/assets/images/epiMoodLogo3.png" width=300px alt="logo">
-         <p>Tracking for Emotional Health</p>
+         <h1>Tracking for Emotional Health</h1>
 			</header>
 		</div>
     <div class="box px-6 pt-10 pb-8 shadow-xl sm:max-w-3xl sm:mx-auto">
@@ -26,6 +26,7 @@
   
         <!-- <form action="/action_page.php"> -->
          <form id="moodForm">
+          <label for="moodRadio">How do I feel?</label> <br>
          <input type="radio" id="joyful" name="moodToday" value=1>
          <label for="joyful">Joyful</label><br>
          <input type="radio" id="powerful" name="moodToday"  value=2>
@@ -38,6 +39,13 @@
          <label for="mad">Mad</label><br>
          <input type="radio" id="scared" name="moodToday"  value=6>
          <label for="scared">Scared</label><br>
+         <label for="epiosdeCheckBox">Check if you had a signficant Episode today.</label> 
+         
+         <input type="checkbox" name="episodeCheckBox"/><br><br>
+         <label for="notesToday">Notes for Today</label><br>
+          <textarea name="notesToday" value="" cols="400" rows="50" style="height:120px; width:600px;">
+         </textarea>
+         <br>
          <input type="submit" value="Submit" id="submitMood">
           </form> <br>
           <form><input type="submit" value="View All Entries" id="viewAllEntries">
@@ -49,6 +57,12 @@
     <div id="result"></div>
 
     </div>
+<div class="box px-6 pt-10 pb-8 shadow-xl sm:max-w-3xl sm:mx-auto  my-7 centerText text-violet-200 flex">
+<img src = "../assets/images/emotions-wheel.jpg" alt="emotionis-wheel">
+</div>
+<p class="sm:max-w-3xl sm:mx-auto  my-7 centerText">
+Todo: add source for the above emotions wheel and/or at least explain what it is and where it came from.
+</p>
 
     <footer class="text-xl px-6 pt-10 pb-8 sm:max-w-3xl sm:mx-auto  my-7 centerText text-violet-200">
       <p>Brought to you by Mary! 2022</p><br>
