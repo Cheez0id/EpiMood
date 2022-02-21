@@ -46,12 +46,13 @@ router.get("/allData/mood/", async (req, res) => {
 });
 
 //Creates a new entry with specified values (TODO:make it so that the user can put whatever they want;RIGHT NOW THE REQ.BODY.INPUTS AREN'T ANYTHING, AND YEAH. NEED TO MAKE THEM THINGS.)
-router.post("/newEntry", async (req, res) => {
+router.post("/newEntry", async (req, res) => { 
+  console.log('yoooooooooooo ',req.body);
 	UserEntries.create({
-		mood: 6,
-		episode: true,
-		text: "OMG PIKACHU DID IT WORK?!",
-		makePrivate: true,
+		mood: req.body.mood,
+		episode: req.body.episode,
+		text: req.body.text,
+		makePrivate: req.body.makePrivate,
 	}).then((newEntry) => {
 		console.log("making a new entry");
 	});

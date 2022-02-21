@@ -73,12 +73,23 @@ document
 //I would very much like to make a post request.
 // RESEARCH, DO WE DO A FETCH REQUEST TO POST TO DB
 document
-.getElementById("createNewEntry")
-.addEventListener("click", function (event) {
-	event.preventDefault();
-	console.log("We'll try and post something");
-	fetch('http://localhost:80/newEntry',
-	{method: 'POST'})});
+	.getElementById("createNewEntry")
+	.addEventListener("click", async function (event) {
+		event.preventDefault();
+		await fetch('http://localhost:80/newEntry',
+		{ 
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ 
+				mood: 8,
+				episode: true,
+				text: 'Mary is the BESTEST and SMARTEST!!!',
+				makePrivate: false
+			})
+		})
+	});
 
 	
 
