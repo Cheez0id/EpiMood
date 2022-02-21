@@ -89,7 +89,8 @@ function selectedMood() {
 		}}
 	return mood;
 	}
-	
+
+const hasEpisode = () => {document.getElementById('episodeCheckBox').checked}
 
 document
 	.getElementById("createNewEntry")
@@ -103,7 +104,7 @@ document
 			},
 			body: JSON.stringify({ 
 				mood: selectedMood(),
-				episode: true,
+				episode: hasEpisode(),
 				text: 'Mary is the BESTEST and SMARTEST!!!',
 				makePrivate: false
 			})
