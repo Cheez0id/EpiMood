@@ -90,7 +90,13 @@ function selectedMood() {
 	return mood;
 	}
 
-const hasEpisode = () => (document.getElementById('episodeCheckBox').checked)
+const hasEpisode = () => {
+	return document.getElementById('episodeCheckBox').checked
+}
+
+const todayNote = () => {
+	return document.getElementById('noteToday').value
+}
 
 document
 	.getElementById("createNewEntry")
@@ -105,7 +111,7 @@ document
 			body: JSON.stringify({ 
 				mood: selectedMood(),
 				episode: hasEpisode(),
-				text: 'Mary is the BESTEST and SMARTEST!!!',
+				text: todayNote(),
 				makePrivate: false
 			})
 		})
