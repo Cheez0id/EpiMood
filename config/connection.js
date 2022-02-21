@@ -20,6 +20,10 @@ const sequelize = process.env.JAWSDB_URL
 				dialectOptions: {
 					timezone: "local",
 				},
+				// production: {
+				// 	use_env_variable: "JAWSDB_URL",
+				// 	dialect: "mysql"
+				// }
 			}
 	  );
 
