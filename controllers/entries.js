@@ -5,15 +5,12 @@ const sequelize=require('sequelize');
 
 //setting up variables where user input will be put into the queries 
 //TODO: checkbox for episodes
-let episodes = {where: {
-  episode: true,
-  }}
+// let episodes = {where: {
+//   episode: true,
+//   }}
 //TODO:user should be able to enter in a number (1-6); RIGHT NOW 3 IS HARDCODED
 // let moodNumber=formResults.moodNumber;
-let moodNumber=2;
-let mood = {where: {
-  mood: moodNumber,
-  }}  
+
 
 
 //TODO: need to get values from user inputs from forms ON FRONTEND for the POST to create new entries
@@ -55,6 +52,7 @@ router.post("/newEntry", async (req, res) => {
 		makePrivate: req.body.makePrivate,
 	}).then((newEntry) => {
 		console.log("making a new entry");
+    res.status(200).send('a new entry was created')
 	});
 });
 
