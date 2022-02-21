@@ -28,14 +28,6 @@ function displayRadioValue() {
 	// checkedMood is {checked: true, mood: 2}
 
 
-//the below is not really necessary, it was just to make sure the radio works; however maybe we can use it to quickly show the user's most recent submission to the form instead of making another db call; "you submitted X"
-document
-	.getElementById("submitMood")
-	.addEventListener("click", function (event) {
-		event.preventDefault();
-		console.log("you clicked the form");
-		displayRadioValue();
-	});
 
 //Displays all DB entries as 'cards' on the page
 const details = document.getElementById("result");
@@ -63,19 +55,6 @@ document
 			});
 	});
 
-//a test get request to get entries with mood set to '2'
-document
-	.getElementById("viewAllMoods")
-	.addEventListener("click", function (event) {
-		event.preventDefault();
-		console.log("you gonna see it all!");
-		fetch("http://localhost:80/allData/mood")
-			.then((response) => response.json())
-			// .then((data) => console.log(JSON.stringify(data)))
-			.then(function (data) {
-				document.getElementById("result").innerHTML = JSON.stringify(data);
-			});
-	});
 
 //I would very much like to make a post request.
 // RESEARCH, DO WE DO A FETCH REQUEST TO POST TO DB
@@ -92,6 +71,10 @@ function selectedMood() {
 
 const hasEpisode = () => {
 	return document.getElementById('episodeCheckBox').checked
+}
+
+const makePrivate = () => {
+	return document.getElementById('makePrivateCheckBox').checked
 }
 
 const todayNote = () => {
@@ -112,7 +95,7 @@ document
 				mood: selectedMood(),
 				episode: hasEpisode(),
 				text: todayNote(),
-				makePrivate: false
+				makePrivate: makePrivate()
 			})
 		})
 	});
