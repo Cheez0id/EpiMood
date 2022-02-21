@@ -51,7 +51,7 @@ document
 				for (let i = 0; i < data.length; i++) {
 					let entry = document.createElement("p");
 					entry.className = "card";
-					entry.innerHTML = `Note: ${data[i].text} <br> Today's Mood: ${data[i].mood} <br> 
+					entry.innerHTML = `Note: ${data[i].text} <br> Today's Mood: ${data[i].mood} <br> Today's Mood: ${data[i].episode} <br> 
 				Private? ${data[i].makePrivate}`;
 					details.append(entry);
 				}
