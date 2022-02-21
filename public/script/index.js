@@ -43,7 +43,9 @@ document
 				for (let i = 0; i < data.length; i++) {
 					let entry = document.createElement("p");
 					entry.className = "card";
-					entry.innerHTML = `Note: ${data[i].text} <br> Today's Mood: ${data[i].mood} <br> Episode Today?: ${data[i].episode} <br> 
+					entry.innerHTML = ` 
+					Today's Date/Time ${data[i].createdAt}<br>
+					Note: ${data[i].text} <br> Today's Mood: ${data[i].mood} <br> Episode Today?: ${data[i].episode} <br> 
 				Private? ${data[i].makePrivate}`;
 					details.append(entry);
 				}
@@ -100,7 +102,11 @@ document
 		})
 	});
 
-	
+	document
+	.getElementById("createNewEntry")
+	.addEventListener("click", async function (event) {
+		event.preventDefault();
+	location.reload})
 
 // module.exports = { moodNumber };
 
