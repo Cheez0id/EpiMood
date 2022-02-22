@@ -1,19 +1,6 @@
 const { UserEntries } = require("../models");
 const router = require("express").Router();
 const sequelize=require('sequelize');
-// const formResults= require('../public/script/index');
-
-//setting up variables where user input will be put into the queries 
-//TODO: checkbox for episodes
-// let episodes = {where: {
-//   episode: true,
-//   }}
-//TODO:user should be able to enter in a number (1-6); RIGHT NOW 3 IS HARDCODED
-// let moodNumber=formResults.moodNumber;
-
-
-
-//TODO: need to get values from user inputs from forms ON FRONTEND for the POST to create new entries
 
 //--------------------
 // Routes for a RESTful API!!

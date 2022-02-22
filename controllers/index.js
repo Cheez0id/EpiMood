@@ -9,8 +9,8 @@ const path=require('path');
 router.use('/', getAllRoute)
 
 //very simple get request.
-//respond with the static HTML file "index" when a GET request is made to the / route;  
-//TODO: well, should we use react next? handlebars?  We need to be able to have a dynamic interface.
+//respond with the HTML file "index" when a GET request is made to the / route;  
+
 router.get('/', function (req, res) {
   res.sendFile('pages/index.html', { root: path.join(__dirname, '../public') })
   console.log("testing this out")
