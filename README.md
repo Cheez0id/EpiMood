@@ -34,8 +34,9 @@ CURRENT TODO LIST:
 </p>
 </details>
 
+<img src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/public/assets/images/appScreenshot.JPG" width="100" alt="Screenshot"><br>
 
-<a href="https://github.com/Cheez0id/EpiMood/projects/1">`Project Board!-->`<img align="center" src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/public/assets/images/wow.gif" width="100px"></a><br>
+<a href="https://github.com/Cheez0id/EpiMood/projects/1">`Project Board!-->`<img align="center" src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/public/assets/images/wow.gif" width="100px"></a>
 
 <a href="https://www.figma.com/file/UupxxFQW8aS4RbZh7oCZKN/EpiMood?node-id=0%3A1">
 `Wireframes!-->`<img align="center" src="https://raw.githubusercontent.com/Cheez0id/EpiMood/main/public/assets/images/initilaFigma.JPG" width="100px"></a>
