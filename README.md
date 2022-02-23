@@ -15,6 +15,12 @@ So that I can find patterns and better structure my schedule around my disorder.
 
 <img align="right" src="https://cdn.discordapp.com/attachments/118377491982319623/942094352497393664/reminder-to-take-your-meds-medication.gif" width="200px"><br>
 
+## Video Presentation
+[![Watch the video](https://raw.githubusercontent.com/Cheez0id/EpiMood/main/public/assets/images/screenshot.JPG)](https://drive.google.com/file/d/14flS4Oj-f50S8AWWzbh7lSEEbSpgph-c/view?usp=sharing)
+
+
+
+
 ## Installation
 To be determined
 <br>
