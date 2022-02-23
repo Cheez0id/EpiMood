@@ -28,7 +28,8 @@ function displayRadioValue() {
 	// checkedMood is {checked: true, mood: 2}
 
 
-
+	const allLocalData = 'https://localhost:80/allData'
+	const allDeployedData = 'https://epimoodtracker.herokuapp.com/allData'
 //Displays all DB entries as 'cards' on the page
 const details = document.getElementById("result");
 document
@@ -36,7 +37,7 @@ document
 	.addEventListener("click", function (event) {
 		event.preventDefault();
 		console.log("you gonna see it all!");
-		fetch("https://localhost:80/allData")
+		fetch(allLocalData || allDeployedData)
 			.then((response) => response.json())
 			// .then((data) => console.log(JSON.stringify(data)))
 			.then(function (data) {
@@ -82,12 +83,13 @@ const makePrivate = () => {
 const todayNote = () => {
 	return document.getElementById('noteToday').value
 }
-
+const newLocalEntry = 'https://localhost:80/newEntry'
+const newDeployedEntry = 'https://epimoodtracker.herokuapp.com/newEntry'
 document
 	.getElementById("createNewEntry")
 	.addEventListener("click", async function (event) {
 		event.preventDefault();
-		await fetch('https://localhost:80/newEntry',
+		await fetch(newLocalEntry || newDeployedEntry,
 		{ 
 			method: 'POST',
 			headers: {
