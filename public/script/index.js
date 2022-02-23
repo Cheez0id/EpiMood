@@ -37,7 +37,7 @@ document
 	.addEventListener("click", function (event) {
 		event.preventDefault();
 		console.log("you gonna see it all!");
-		fetch(allLocalData || allDeployedData)
+		fetch(allDeployedData || allLocalData)
 			.then((response) => response.json())
 			// .then((data) => console.log(JSON.stringify(data)))
 			.then(function (data) {
@@ -89,7 +89,7 @@ document
 	.getElementById("createNewEntry")
 	.addEventListener("click", async function (event) {
 		event.preventDefault();
-		await fetch(newLocalEntry || newDeployedEntry,
+		await fetch(newDeployedEntry || newLocalEntry,
 		{ 
 			method: 'POST',
 			headers: {
