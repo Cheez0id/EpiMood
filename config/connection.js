@@ -8,24 +8,24 @@ require("dotenv").config();
 //create new Sequelize object? with the params/values from .env so as to connect to the app database
 //dialectOptions are passed directly into the MySQL connection constructor - can provide custom options https://www.npmjs.com/package/mysql#connection-options
 const sequelize = process.env.JAWSDB_URL
-	? new Sequelize(process.env.JAWSDB_URL)
-	: new Sequelize(
-			process.env.DB_TITLE,
-			process.env.DB_USER,
-			process.env.DB_PW,
-			{
-				host: "localhost",
-				dialect: "mysql",
-				port: 3306,
-				dialectOptions: {
-					timezone: "local",
-				},
-				// production: {
-				// 	use_env_variable: "JAWSDB_URL",
-				// 	dialect: "mysql"
-				// }
-			}
-	  );
+	 new Sequelize(process.env.JAWSDB_URL)
+	// : new Sequelize(
+	// 		process.env.DB_TITLE,
+	// 		process.env.DB_USER,
+	// 		process.env.DB_PW,
+	// 		{
+	// 			host: "localhost",
+	// 			dialect: "mysql",
+	// 			port: 3306,
+	// 			dialectOptions: {
+	// 				timezone: "local",
+	// 			},
+	// 			// production: {
+	// 			// 	use_env_variable: "JAWSDB_URL",
+	// 			// 	dialect: "mysql"
+	// 			// }
+	// 		}
+	//   );
 
 		//just to confirm connected to the app database
   sequelize
