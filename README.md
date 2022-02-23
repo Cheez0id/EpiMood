@@ -1,5 +1,5 @@
 # EpiMood
-A personal project to create a full-stack app to track mood disorder activity.
+A personal project (from conception to deployment) to create a full-stack app to track mood disorder activity.
 This must be a full-stack app, so there will be a clean and intuitive UI, functional code Application Programming Interface, and well-structured database.
 ## Deployed to Heroku!!
 https://epimoodtracker.herokuapp.com/
