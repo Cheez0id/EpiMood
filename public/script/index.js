@@ -27,9 +27,16 @@ function displayRadioValue() {
 	//checkedMood = moodInputs.find(moodInput => moodInput.checked === true);
 	// checkedMood is {checked: true, mood: 2}
 
+	let testRoute ='';
+	let allLocalData = 'http://localhost:80/allData'
+	let allDeployedData = 'https://epimoodtracker.herokuapp.com/allData'
+console.log(window.location.href)
+	if (window.location.href == 'http://localhost/'){
+		testRoute = allLocalData
+	} else {
+		testRoute = allDeployedData
+	}
 
-	const allLocalData = 'https://localhost:80/allData'
-	const allDeployedData = 'https://epimoodtracker.herokuapp.com/allData'
 //Displays all DB entries as 'cards' on the page
 const details = document.getElementById("result");
 document
@@ -37,7 +44,7 @@ document
 	.addEventListener("click", function (event) {
 		event.preventDefault();
 		console.log("you gonna see it all!");
-		fetch(allDeployedData || allLocalData)
+		fetch(testRoute)
 			.then((response) => response.json())
 			// .then((data) => console.log(JSON.stringify(data)))
 			.then(function (data) {
@@ -83,13 +90,22 @@ const makePrivate = () => {
 const todayNote = () => {
 	return document.getElementById('noteToday').value
 }
-const newLocalEntry = 'https://localhost:80/newEntry'
-const newDeployedEntry = 'https://epimoodtracker.herokuapp.com/newEntry'
+
+let testRoute2 ='';
+let newLocalEntry = 'http://localhost:80/newEntry'
+let newDeployedEntry = 'https://epimoodtracker.herokuapp.com/newEntry'
+console.log(window.location.href)
+if (window.location.href == 'http://localhost/'){
+	testRoute2 = newLocalEntry
+} else {
+	testRoute2 = newDeployedEntry
+}
+
 document
 	.getElementById("createNewEntry")
 	.addEventListener("click", async function (event) {
 		event.preventDefault();
-		await fetch(newDeployedEntry || newLocalEntry,
+		await fetch(testRoute2,
 		{ 
 			method: 'POST',
 			headers: {

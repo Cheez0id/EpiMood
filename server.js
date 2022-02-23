@@ -25,6 +25,6 @@ app.use(require("./controllers"));
 const sequelize = require("./config/connection");
 sequelize.sync({ force: false }).then(() => {
 	app.listen(PORT, () => {
-		console.log(`helloooo!!! it's workin ${PORT}`);
+		console.log(`helloooo!!! it's workin ${PORT}`, __dirname);
 	});
 });
