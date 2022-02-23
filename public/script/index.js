@@ -87,7 +87,7 @@ document
 	.getElementById("createNewEntry")
 	.addEventListener("click", async function (event) {
 		event.preventDefault();
-		await fetch('https://epimoodtracker.herokuapp.com/newEntry',
+		await fetch('https://localhost:80/newEntry',
 		{ 
 			method: 'POST',
 			headers: {
