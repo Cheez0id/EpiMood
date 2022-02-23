@@ -36,7 +36,7 @@ document
 	.addEventListener("click", function (event) {
 		event.preventDefault();
 		console.log("you gonna see it all!");
-		fetch("http://localhost:80/allData")
+		fetch("https://localhost:80/allData")
 			.then((response) => response.json())
 			// .then((data) => console.log(JSON.stringify(data)))
 			.then(function (data) {
@@ -87,7 +87,7 @@ document
 	.getElementById("createNewEntry")
 	.addEventListener("click", async function (event) {
 		event.preventDefault();
-		await fetch('http://localhost:80/newEntry',
+		await fetch('https://localhost:80/newEntry',
 		{ 
 			method: 'POST',
 			headers: {
