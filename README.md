@@ -59,4 +59,6 @@ This is an alpha iteration designed to be a browser app, but down the road I pla
   <li>JawsDB</li>
  </ul>
 
+## Contributors
+Mary Prince, Jacob Carver
 
