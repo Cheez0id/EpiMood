@@ -12,7 +12,7 @@ exports.dropBuildDB = function () {
     password: "root1234",
   }
   );
-  console.log('HEY!!!');
+  console.log('HEY!!! By the way, these are your current Databases!');
 
   //drop previous
   // connection.query(
@@ -25,23 +25,23 @@ exports.dropBuildDB = function () {
   connection.query(
     `SHOW DATABASES`,
     function (err, results) {
-      console.log(results);
-      console.log(err);
+      // console.log(results);
+      // console.log(err);
     }
   );
   // Run create database statement
   connection.query(
     `CREATE DATABASE epimood_db`,
     function (err, results) {
-      console.log(results);
-      console.log(err);
+      // console.log(results);
+      // console.log(err);
     }
   ).then
   connection.query(
     `SHOW DATABASES`,
     function (err, results) {
       console.log(results);
-      console.log(err);
+      // console.log(err);
     }
   );
   // Close the connection
