@@ -67,11 +67,10 @@ router.put("/editEntry", async (req, res) => {
 router.delete("/deleteEntry", async (req, res) => {
 	UserEntries.destroy(
    {
-    where: {
-      id: 2
-    }
+    where: {},
+	truncate:true
 	}).then(function(){
-       console.log('Deleted successfully');
+       console.log('Deleted everything successfully');
      }, function(err){
       console.log(err); 
   });

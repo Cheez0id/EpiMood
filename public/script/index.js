@@ -66,8 +66,6 @@ document
 	});
 
 
-//I would very much like to make a post request.
-// RESEARCH, DO WE DO A FETCH REQUEST TO POST TO DB
 
 function selectedMood() {
 	let ele = document.getElementsByName("moodToday");
@@ -91,10 +89,11 @@ const todayNote = () => {
 	return document.getElementById('noteToday').value
 }
 
+
+
 let testRoute2 ='';
 let newLocalEntry = 'http://localhost:80/newEntry'
 let newDeployedEntry = 'https://epimoodtracker.herokuapp.com/newEntry'
-console.log(window.location.href)
 if (window.location.href == 'http://localhost/'){
 	testRoute2 = newLocalEntry
 } else {
@@ -125,6 +124,36 @@ document
 	.addEventListener("click", async function (event) {
 		event.preventDefault();
 	location.reload})
+
+
+
+
+
+
+//trying to delete all
+
+
+
+let testRoute3 ='';
+	let deleteLocalData = 'http://localhost:80/deleteEntry'
+	let deleteDeployedData = 'https://epimoodtracker.herokuapp.com/deleteEntry'
+console.log(window.location.href)
+	if (window.location.href == 'http://localhost/'){
+		testRoute = allLocalData
+	} else {
+		testRoute = allDeployedData
+	}
+
+//Displays all DB entries as 'cards' on the page
+document
+	.getElementById("deleteAll")
+	.addEventListener("click", function (event) {
+		event.preventDefault();
+		console.log("deleteEverything");
+		fetch(testRoute3)
+	});
+
+
 
 // module.exports = { moodNumber };
 
