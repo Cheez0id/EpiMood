@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS epiMood_db;
+DROP DATABASE IF EXISTS epimood_db;
 
-CREATE DATABASE epiMood_db;
+CREATE DATABASE epimood_db;
 
 

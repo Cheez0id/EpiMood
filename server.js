@@ -1,10 +1,10 @@
 // Dependencies
 const express = require("express");
 const path = require("path");
-// const createDB = require('../EpiMood/util/createDB')
-// const makeDB = createDB.dropBuildDB;
+const createDB = require('./util/createDB');
+const makeDB = createDB.dropBuildDB;
 
-// makeDB();
+makeDB();
 
 //make express the app
 const app = express();
@@ -24,6 +24,8 @@ app.use(express.static(path.join(__dirname,'public')));
 //first param is the endpoint, second will be the folder
 // app.use("/api", controllers);
 app.use(require("./controllers"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //Connecting to the database
 const sequelize = require("./config/connection");

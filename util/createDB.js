@@ -2,16 +2,21 @@
 
 const mysql = require("mysql2");
 
+
+
 exports.dropBuildDB = function () {
   // Open the connection to MySQL server
   const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "root1234",
-  });
+  }
+  );
+  console.log('HEY!!!');
+
   //drop previous
   connection.query(
-    `DROP DATABASE epiMood_db`,
+    `DROP DATABASE epimood_db`,
     function (err, results) {
       console.log(results);
       console.log(err);
@@ -26,7 +31,7 @@ exports.dropBuildDB = function () {
   );
   // Run create database statement
   connection.query(
-    `CREATE DATABASE epiMood_db`,
+    `CREATE DATABASE epimood_db`,
     function (err, results) {
       console.log(results);
       console.log(err);
@@ -42,5 +47,7 @@ exports.dropBuildDB = function () {
   // Close the connection
   connection.end();
   }
+
+  
 
 
