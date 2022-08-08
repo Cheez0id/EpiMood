@@ -33,7 +33,7 @@ document
           let entry = document.createElement("p");
           entry.className = "card";
           entry.innerHTML = ` 
-					Today's Date/Time ${data[i].createdAt}<br>
+					Entry ID# ${data[i].id} Created on ${data[i].createdAt}<br>
 					Note: ${data[i].text} <br> Today's Mood: ${data[i].mood} <br> Episode Today?: ${data[i].episode} <br> 
 				Private? ${data[i].makePrivate}`;
           details.append(entry);
@@ -96,14 +96,12 @@ document
     });
   });
 
-
 // this will refresh the page
-  document
+document
   .getElementById("refreshPage")
   .addEventListener("click", function (event) {
     event.preventDefault();
     location.reload();
-  
   });
 
 //trying to delete all
@@ -120,10 +118,9 @@ if (window.location.href == "http://localhost/") {
 document
   .getElementById("deleteAll")
   .addEventListener("click", function (event) {
-    console.log("deleteEverything");
     event.preventDefault();
-    fetch(deleteRoute).then;
-    console.log("deleteEverything");
+    fetch(deleteLocalData, { method: "DELETE" }).then;
+    console.log("deletedEverything");
   });
 
 // ------------------------------- IGNORE BELOW, IT'S REFERENCE CODE----------------------//
