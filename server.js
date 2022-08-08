@@ -34,5 +34,3 @@ sequelize.sync({ force: false }).then(() => {
 		console.log(`helloooo!!! it's workin ${PORT}`, __dirname);
 	});
 });
-
-//note update

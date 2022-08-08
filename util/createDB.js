@@ -15,13 +15,13 @@ exports.dropBuildDB = function () {
   console.log('HEY!!!');
 
   //drop previous
-  connection.query(
-    `DROP DATABASE epimood_db`,
-    function (err, results) {
-      console.log(results);
-      console.log(err);
-    }
-  ).then
+  // connection.query(
+  //   `DROP DATABASE epimood_db`,
+  //   function (err, results) {
+  //     console.log(results);
+  //     console.log(err);
+  //   }
+  // ).then
   connection.query(
     `SHOW DATABASES`,
     function (err, results) {
