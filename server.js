@@ -1,6 +1,10 @@
 // Dependencies
 const express = require("express");
 const path = require("path");
+// const createDB = require('../EpiMood/util/createDB')
+// const makeDB = createDB.dropBuildDB;
+
+// makeDB();
 
 //make express the app
 const app = express();
