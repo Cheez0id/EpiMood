@@ -2,9 +2,9 @@
 const express = require("express");
 const path = require("path");
 const createDB = require('./util/createDB');
-const makeDB = createDB.dropBuildDB;
+// const makeDB = createDB.dropBuildDB;
 
-makeDB();
+// makeDB();
 
 //make express the app
 const app = express();
