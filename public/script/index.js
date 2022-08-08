@@ -119,7 +119,7 @@ document
   .getElementById("deleteAll")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    fetch(deleteLocalData, { method: "DELETE" }).then;
+    fetch(deleteRoute, { method: "DELETE" }).then;
     console.log("deletedEverything");
   });
 
