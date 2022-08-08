@@ -68,3 +68,4 @@ This is an alpha iteration designed to be a browser app, but down the road I pla
 ## Contributors
 <a href="https://github.com/Cheez0id">Mary Prince</a>, <a href="https://github.com/jake10693">Jacob Carver</a>
 
+*Mary Lee Prince*
