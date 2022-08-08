@@ -2,8 +2,9 @@
 const express = require("express");
 const path = require("path");
 const createDB = require('./util/createDB');
-// const makeDB = createDB.dropBuildDB;
 
+//if you un-comment the below two lines, the epimood_db should be created for you when you run server.js for local work;
+// const makeDB = createDB.dropBuildDB;
 // makeDB();
 
 //make express the app
