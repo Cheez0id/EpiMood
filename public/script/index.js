@@ -140,7 +140,7 @@ document
     } else {
       deleteOneRoute = deleteDeployedOne;
     }
-    console.log(deleteLocalOne);
+    
     event.preventDefault();
     fetch(deleteOneRoute, { method: "DELETE" }).then;
     console.log(`deleted ${idInput}`);
