@@ -108,7 +108,6 @@ document
 let deleteRoute = "";
 let deleteLocalData = "http://localhost:80/deleteAll";
 let deleteDeployedData = "https://epimoodtracker.herokuapp.com/deleteAll";
-console.log(window.location.href);
 if (window.location.href == "http://localhost/") {
   deleteRoute = deleteLocalData;
 } else {
@@ -119,14 +118,33 @@ document
   .getElementById("deleteAll")
   .addEventListener("click", function (event) {
     event.preventDefault();
-        if (confirm("!WARNING! THIS WILL PERMANENTLY DELETE ALL ENTRIES!")){
+    if (confirm("!WARNING! THIS WILL PERMANENTLY DELETE ALL ENTRIES!")) {
       fetch(deleteRoute, { method: "DELETE" }).then;
       console.log("deletedEverything");
       location.reload();
-    }   
+    }
   });
 
-  
+// delete one including a prompt
+let deletOneRoute = "";
+let idInput = document.getElementById("idInput").value;
+
+document
+  .getElementById("deleteOne")
+  .addEventListener("click", function (event) {
+    let idInput = document.getElementById("idInput").value;
+    let deleteLocalOne = `http://localhost:80/deleteEntry/${idInput}`;
+    let deleteDeployedOne = `https://epimoodtracker.herokuapp.com/deleteEntry/${idInput}`;
+    if (window.location.href == "http://localhost/") {
+      deleteOneRoute = deleteLocalOne;
+    } else {
+      deleteOneRoute = deleteDeployedOne;
+    }
+    console.log(deleteLocalOne);
+    event.preventDefault();
+    fetch(deleteOneRoute, { method: "DELETE" }).then;
+    console.log(`deleted ${idInput}`);
+  });
 
 // ------------------------------- IGNORE BELOW, IT'S REFERENCE CODE----------------------//
 

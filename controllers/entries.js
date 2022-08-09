@@ -87,10 +87,10 @@ router.delete("/deleteEntry/:id", async (req, res) => {
   UserEntries.destroy(
     {
       where: {
-        id:1
+       id: req.params.id
       }
     },
-    res.json([])
+    res.json("destroyed")
   ).then(
     function () {
       console.log("Deleted successfully");
