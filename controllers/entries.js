@@ -6,7 +6,7 @@ const sequelize = require("sequelize");
 // Routes for a RESTful API!!
 
 //shows all of the userentries data in JSON
-router.get("/allData", async (req, res) => {
+router.get("/allEntries", async (req, res) => {
   UserEntries.findAll().then((entryData) => {
     console.log("Gotta Catch 'Em All!");
     res.json(entryData);
@@ -14,7 +14,7 @@ router.get("/allData", async (req, res) => {
 });
 
 //shows a list of entries with episodes
-router.get("/allData/episodes", async (req, res) => {
+router.get("/allEntries/episodes", async (req, res) => {
   UserEntries.findAll(episodes).then((entryData) => {
     console.log("Found episodes!");
     res.json(entryData);
@@ -22,7 +22,7 @@ router.get("/allData/episodes", async (req, res) => {
 });
 
 //shows a list of entries with moods
-router.get("/allData/mood/", async (req, res) => {
+router.get("/allEntries/mood/", async (req, res) => {
   UserEntries.findAll(mood).then((entryData) => {
     console.log("Found moods!");
     res.json(entryData);
@@ -65,7 +65,7 @@ router.put("/editEntry", async (req, res) => {
 });
 
 //Destroys all entries
-router.delete("/deleteEntry", async (req, res) => {
+router.delete("/deleteAll", async (req, res) => {
   UserEntries.destroy(
     {
       where: {},
@@ -83,11 +83,12 @@ router.delete("/deleteEntry", async (req, res) => {
 });
 
 //Destroys a specified entry by ID (TODO: Make it so that the user can specify which entry to destroy)
-router.delete("/deleteEntry", async (req, res) => {
+router.delete("/deleteEntry/:id", async (req, res) => {
   UserEntries.destroy(
     {
-      where: {},
-      truncate: true,
+      where: {
+        id:1
+      }
     },
     res.json([])
   ).then(

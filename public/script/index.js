@@ -8,14 +8,14 @@ window.onload = function () {
   );
 };
 
-let testRoute = "";
-let allLocalData = "http://localhost:80/allData";
-let allDeployedData = "https://epimoodtracker.herokuapp.com/allData";
+let allRoute = "";
+let allLocalData = "http://localhost:80/allEntries";
+let allDeployedData = "https://epimoodtracker.herokuapp.com/allEntries";
 console.log(window.location.href);
 if (window.location.href == "http://localhost/") {
-  testRoute = allLocalData;
+  allRoute = allLocalData;
 } else {
-  testRoute = allDeployedData;
+  allRoute = allDeployedData;
 }
 
 //Displays all DB entries as 'cards' on the page
@@ -25,7 +25,7 @@ document
   .addEventListener("click", function (event) {
     event.preventDefault();
     console.log("you gonna see it all!");
-    fetch(testRoute)
+    fetch(allRoute)
       .then((response) => response.json())
       // .then((data) => console.log(JSON.stringify(data)))
       .then(function (data) {
@@ -104,10 +104,10 @@ document
     location.reload();
   });
 
-//trying to delete all
+// delete all incluiding a warning prompt
 let deleteRoute = "";
-let deleteLocalData = "http://localhost:80/deleteEntry";
-let deleteDeployedData = "https://epimoodtracker.herokuapp.com/deleteEntry";
+let deleteLocalData = "http://localhost:80/deleteAll";
+let deleteDeployedData = "https://epimoodtracker.herokuapp.com/deleteAll";
 console.log(window.location.href);
 if (window.location.href == "http://localhost/") {
   deleteRoute = deleteLocalData;
@@ -124,8 +124,9 @@ document
       console.log("deletedEverything");
       location.reload();
     }   
-    
   });
+
+  
 
 // ------------------------------- IGNORE BELOW, IT'S REFERENCE CODE----------------------//
 
