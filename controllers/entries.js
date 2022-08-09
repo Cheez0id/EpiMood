@@ -64,6 +64,24 @@ router.put("/editEntry", async (req, res) => {
   });
 });
 
+//Destroys all entries
+router.delete("/deleteEntry", async (req, res) => {
+  UserEntries.destroy(
+    {
+      where: {},
+      truncate: true,
+    },
+    res.json([])
+  ).then(
+    function () {
+      console.log("Deleted successfully");
+    },
+    function (err) {
+      console.log(err);
+    }
+  );
+});
+
 //Destroys a specified entry by ID (TODO: Make it so that the user can specify which entry to destroy)
 router.delete("/deleteEntry", async (req, res) => {
   UserEntries.destroy(

@@ -119,8 +119,12 @@ document
   .getElementById("deleteAll")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    fetch(deleteRoute, { method: "DELETE" }).then;
-    console.log("deletedEverything");
+        if (confirm("!WARNING! THIS WILL PERMANENTLY DELETE ALL ENTRIES!")){
+      fetch(deleteRoute, { method: "DELETE" }).then;
+      console.log("deletedEverything");
+      location.reload();
+    }   
+    
   });
 
 // ------------------------------- IGNORE BELOW, IT'S REFERENCE CODE----------------------//
