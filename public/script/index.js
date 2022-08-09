@@ -20,30 +20,39 @@ if (window.location.href == "http://localhost/") {
 
 //Displays all DB entries as 'cards' on the page
 const details = document.getElementById("result");
+function allEntries() {
+  fetch(allRoute)
+    .then((response) => response.json())
+       .then(function (data) {
+      for (let i = 0; i < data.length; i++) {
+        let entry = document.createElement("p");
+        entry.className = "card";
+        entry.innerHTML = ` 
+    Entry ID# ${data[i].id} Created on ${data[i].createdAt}<br>
+    Note: ${data[i].text} <br> Today's Mood: ${data[i].mood} <br> Episode Today?: ${data[i].episode} <br> 
+  Private? ${data[i].makePrivate}`;
+        details.append(entry);
+      }
+
+      //  `Today's Mood: ${data[i].mood} <br>
+      //  Private? ${data[i].makePrivate}`;
+      //  console.log(data[0]);
+      });
+}
+//this is currently what I'm working on; need to primisify the thingy to get rid of the old cards first
+// function detailsLoop(){
+//   for (let i=0; i<details.children.length; i++){
+//     details.remove(i)
+//   }
+// }
+
 document
   .getElementById("viewAllEntries")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    console.log("you gonna see it all!");
-    fetch(allRoute)
-      .then((response) => response.json())
-      // .then((data) => console.log(JSON.stringify(data)))
-      .then(function (data) {
-        for (let i = 0; i < data.length; i++) {
-          let entry = document.createElement("p");
-          entry.className = "card";
-          entry.innerHTML = ` 
-					Entry ID# ${data[i].id} Created on ${data[i].createdAt}<br>
-					Note: ${data[i].text} <br> Today's Mood: ${data[i].mood} <br> Episode Today?: ${data[i].episode} <br> 
-				Private? ${data[i].makePrivate}`;
-          details.append(entry);
-        }
-
-        //  `Today's Mood: ${data[i].mood} <br>
-        //  Private? ${data[i].makePrivate}`;
-        //  console.log(data[0]);
-        console.log(data);
-      });
+    console.log(details.children.length);
+    // detailsLoop();
+    allEntries()
   });
 
 function selectedMood() {
@@ -140,7 +149,7 @@ document
     } else {
       deleteOneRoute = deleteDeployedOne;
     }
-    
+
     event.preventDefault();
     fetch(deleteOneRoute, { method: "DELETE" }).then;
     console.log(`deleted ${idInput}`);
