@@ -150,11 +150,11 @@ document
 //DELETE ONE and refresh details section
 // delete one including a prompt
 let deletOneRoute = "";
-
+let idInput = document.getElementById("idInput").value;
 document
   .getElementById("deleteOne")
   .addEventListener("click", function () {
-    let idInput = document.getElementById("idInput").value;
+    
     let deleteLocalOne = `http://localhost:80/deleteEntry/${idInput}`;
     let deleteDeployedOne = `https://epimoodtracker.herokuapp.com/deleteEntry/${idInput}`;
     if (window.location.href == "http://localhost/") {
@@ -163,9 +163,10 @@ document
       deleteOneRoute = deleteDeployedOne;
     }
     
-    fetch(deleteOneRoute, { method: "DELETE" }).then;
+    fetch(deleteOneRoute, { method: "DELETE" }).then
     detailsLoop();
     console.log(`deleted ${idInput}`);
+    
   });
 
 
@@ -194,7 +195,7 @@ document
       body: JSON.stringify({
         text: updateNote(),
       }),
-    }).then;
+    })
     detailsLoop();
     console.log(`edited ${idEdit}`);
   });
