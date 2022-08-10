@@ -21,6 +21,8 @@ if (window.location.href == "http://localhost/") {
 //Displays all DB entries as 'cards' on the page
 const details = document.getElementById("result");
 
+
+
 function allEntries() {
   fetch(allRoute)
     .then((response) => response.json())
@@ -32,7 +34,7 @@ function allEntries() {
     Entry ID# ${data[i].id} Created on ${data[i].createdAt}<br>
     Note: ${data[i].text} <br> Today's Mood: ${data[i].mood} <br> Episode Today?: ${data[i].episode} <br> 
   Private? ${data[i].makePrivate}`;
-        details.append(entry);
+        details.append(entry)
       }
 
       //  `Today's Mood: ${data[i].mood} <br>
@@ -40,6 +42,11 @@ function allEntries() {
       //  console.log(data[0]);
     });
   console.log("yay!");
+  detailsLoop();
+}
+
+async function showAll(){
+  await allEntries();
 }
 
 //a function to remove the cards from the details section
@@ -120,8 +127,7 @@ document
         makePrivate: makePrivate(),
       }),
     }).then
-    allDetails().then
-    allEntries()
+    detailsLoop()
   });
 
 // this will refresh the page
