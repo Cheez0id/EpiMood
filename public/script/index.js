@@ -42,7 +42,8 @@ function allEntries() {
       //  console.log(data[0]);
     });
   console.log("yay!");
-  detailsLoop();
+  detailsLoop()
+  
 }
 
 async function showAll(){
