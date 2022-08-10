@@ -48,7 +48,7 @@ function detailsLoop(){
     
   for (let i=0; i < details.children.length; i++){
     console.log(details.children[i]);
-     details.removeChild[i]
+     details.children[i].remove()
   }
   
 }
@@ -61,6 +61,7 @@ document
   .getElementById("viewAllEntries")
   .addEventListener("click", function (event) {
     event.preventDefault();
+    if (details.children.length !== 0)
     allDetails().then
     allEntries();
  });
