@@ -1,13 +1,11 @@
-// const express = require('express');
-// const app = express();
-
 //creating an onlonad event with a quick alert box
 window.onload = function () {
   alert(
     "!WARNING! This is a SAMPLE app! Anything that you submit is CURRENTLY VISIBLE TO THE PUBLIC!"
   );
 };
-
+//GET ALL
+//sets routes to get all of the entries
 let allRoute = "";
 let allLocalData = "http://localhost:80/allEntries";
 let allDeployedData = "https://epimoodtracker.herokuapp.com/allEntries";
@@ -17,12 +15,8 @@ if (window.location.href == "http://localhost/") {
 } else {
   allRoute = allDeployedData;
 }
-
 //Displays all DB entries as 'cards' on the page
 const details = document.getElementById("result");
-
-
-
 function allEntries() {
   fetch(allRoute)
     .then((response) => response.json())
@@ -34,25 +28,23 @@ function allEntries() {
     Entry ID# ${data[i].id} Created on ${data[i].createdAt}<br>
     Note: ${data[i].text} <br> Today's Mood: ${data[i].mood} <br> Episode Today?: ${data[i].episode} <br> 
   Private? ${data[i].makePrivate}`;
-        details.append(entry)
+        details.append(entry);
       }
-
       //  `Today's Mood: ${data[i].mood} <br>
       //  Private? ${data[i].makePrivate}`;
       //  console.log(data[0]);
     });
   console.log("yay!");
-  detailsLoop()
-  
 }
 
-async function showAll(){
+//making the above function a promise
+async function showAll() {
   await allEntries();
 }
 
 //a function to remove the cards from the details section
 function detailsLoop() {
-  details.innerHTML = '';
+  details.innerHTML = "";
 }
 
 //making a promise of the above
@@ -60,13 +52,11 @@ async function allDetails() {
   await detailsLoop();
 }
 
-//reset helper function
-function resetDetails(){
-  if (details.children.length !== 0) 
-    allDetails().then;
-    allEntries();
+//reset helper function uses the
+function resetDetails() {
+  if (details.children.length !== 0) allDetails().then;
+  allEntries();
 }
-
 
 //a function to call remove cards then show all entries
 document
@@ -77,9 +67,8 @@ document
   });
 
 
-
-
-
+//CREATE ENTRIES
+//selectors for user input/entries
 function selectedMood() {
   let ele = document.getElementsByName("moodToday");
   let mood;
@@ -90,19 +79,16 @@ function selectedMood() {
   }
   return mood;
 }
-
 const hasEpisode = () => {
   return document.getElementById("episodeCheckBox").checked;
 };
-
 const makePrivate = () => {
   return document.getElementById("makePrivateCheckBox").checked;
 };
-
 const todayNote = () => {
   return document.getElementById("noteToday").value;
 };
-
+//routes for develop and production
 let newEntryRoute = "";
 let newLocalEntry = "http://localhost:80/newEntry";
 let newDeployedEntry = "https://epimoodtracker.herokuapp.com/newEntry";
@@ -111,7 +97,7 @@ if (window.location.href == "http://localhost/") {
 } else {
   newDeployedEntry = newDeployedEntry;
 }
-
+//create new entry with values from user and then clear the details section
 document
   .getElementById("createNewEntry")
   .addEventListener("click", async function (event) {
@@ -127,11 +113,11 @@ document
         text: todayNote(),
         makePrivate: makePrivate(),
       }),
-    }).then
-    detailsLoop()
+    }).then;
+    detailsLoop();
   });
 
-// this will refresh the page
+// A button to refresh the page
 document
   .getElementById("refreshPage")
   .addEventListener("click", function (event) {
@@ -139,6 +125,7 @@ document
     location.reload();
   });
 
+//DELETE ALL and REFRESH
 // delete all incluiding a warning prompt
 let deleteRoute = "";
 let deleteLocalData = "http://localhost:80/deleteAll";
@@ -160,13 +147,14 @@ document
     }
   });
 
+//DELETE ONE and refresh details section
 // delete one including a prompt
 let deletOneRoute = "";
-let idInput = document.getElementById("idInput").value;
 
 document
-  .getElementById("deleteOne")
-  .addEventListener("click", function (event) {
+  .getElementById("idInput")
+  .addEventListener("change", function (event) {
+    event.preventDefault();
     let idInput = document.getElementById("idInput").value;
     let deleteLocalOne = `http://localhost:80/deleteEntry/${idInput}`;
     let deleteDeployedOne = `https://epimoodtracker.herokuapp.com/deleteEntry/${idInput}`;
@@ -175,39 +163,49 @@ document
     } else {
       deleteOneRoute = deleteDeployedOne;
     }
-
-    event.preventDefault();
-    fetch(deleteOneRoute, { method: "DELETE" }).then
-    detailsLoop()
-    console.log(`deleted ${idInput}`) 
+    
+    fetch(deleteOneRoute, { method: "DELETE" }).then;
+    detailsLoop();
+    console.log(`deleted ${idInput}`);
   });
+
+
+//EDIT ONE
+let editOneRoute = "";
+const updateNote = () => {
+  return document.getElementById("additional").value;
+};
+document
+  .getElementById("editOne")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    let idEdit = document.getElementById("idEdit").value;
+    let editLocalOne = `http://localhost:80/editEntry/${idEdit}`;
+    let editDeployedOne = `https://epimoodtracker.herokuapp.com/editEntry/${idEdit}`;
+    if (window.location.href == "http://localhost/") {
+      editOneRoute = editLocalOne;
+    } else {
+      editOneRoute = editDeployedOne;
+    }
+    fetch(editOneRoute, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        text: updateNote(),
+      }),
+    }).then;
+    detailsLoop();
+    console.log(`edited ${idEdit}`);
+  });
+
+
+
+
 
 // ------------------------------- IGNORE BELOW, IT'S REFERENCE CODE----------------------//
 
-// async function newFormHandler(event) {
-//   event.preventDefault();
-//   // Send fetch request to add a new dish
-//   const response = await fetch(`/api/dish`, {
-//     method: 'POST',
-//     body: JSON.stringify({
-//       dish_name,
-//       description,
-//       guest_name,
-//       has_nuts,
-//     }),
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//   });
-//   //if the dish is added, the 'all' template will be rerendered
-//   if (response.ok) {
-//     document.location.replace('/');
-//   } else {
-//     alert('Failed to add dish');
-//   }
-// }
-
-// document.querySelector('.new-dish-form').addEventListener('submit', newFormHandler);
 
 //something about showing moods
 // //The radio selection on the form; currently the function will loop through each radio named 'moodtoday' and will take the checked radio, then put the value into the result area below;

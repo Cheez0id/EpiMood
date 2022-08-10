@@ -31,14 +31,13 @@ router.get("/allEntries/mood/", async (req, res) => {
 
 //Creates a new entry with specified values (TODO:make it so that the user can put whatever they want;RIGHT NOW THE REQ.BODY.INPUTS AREN'T ANYTHING, AND YEAH. NEED TO MAKE THEM THINGS.)
 router.post("/newEntry", async (req, res) => {
-  console.log("yoooooooooooo ", req.body);
-  UserEntries.create({
+   UserEntries.create({
     mood: req.body.mood,
     episode: req.body.episode,
     text: req.body.text,
     makePrivate: req.body.makePrivate,
   }).then((newEntry) => {
-    console.log("making a new entry");
+    console.log("successfully made new entry");
     res.status(200).send("a new entry was created");
   });
 });
@@ -46,15 +45,14 @@ router.post("/newEntry", async (req, res) => {
 // let variablee= `2022-02-15T23:23:28.000Z`;
 
 //Updates a specific entry with a specified value (TODO: make it so that the user can select a specific entry and update different values)
-router.put("/editEntry", async (req, res) => {
-  let variablee = "2022-02-15" + "T23:23:28.000Z";
+router.put("/editEntry/:id", async (req, res) => {
   UserEntries.update(
     {
-      text: "a very different text update RETURNS THE SEQUELBOB MAKES HIS ESCAPE WITH SANTA",
+      text: req.body.text
     },
     {
       where: {
-        createdAt: `${variablee}`,
+        id: req.params.id
       },
     }
   );
