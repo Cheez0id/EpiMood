@@ -152,9 +152,8 @@ document
 let deletOneRoute = "";
 
 document
-  .getElementById("idInput")
-  .addEventListener("change", function (event) {
-    event.preventDefault();
+  .getElementById("deleteOne")
+  .addEventListener("click", function () {
     let idInput = document.getElementById("idInput").value;
     let deleteLocalOne = `http://localhost:80/deleteEntry/${idInput}`;
     let deleteDeployedOne = `https://epimoodtracker.herokuapp.com/deleteEntry/${idInput}`;
