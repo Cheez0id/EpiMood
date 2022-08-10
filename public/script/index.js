@@ -44,10 +44,6 @@ function allEntries() {
 
 //a function to remove the cards from the details section
 function detailsLoop() {
-  console.log(details.children.length);
-  // for (let i = 0; i <= details.children.length; i++) {
-  //   console.log(details.children[i]);
-    
   details.innerHTML = '';
 }
 
@@ -62,9 +58,7 @@ function resetDetails(){
     allDetails().then;
     allEntries();
 }
-async function resetHelper() {
-  await resetDetails();
-}
+
 
 //a function to call remove cards then show all entries
 document
@@ -114,7 +108,7 @@ document
   .getElementById("createNewEntry")
   .addEventListener("click", async function (event) {
     event.preventDefault();
-    await fetch(newDeployedEntry, {
+    fetch(newDeployedEntry, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -125,7 +119,9 @@ document
         text: todayNote(),
         makePrivate: makePrivate(),
       }),
-    });
+    }).then
+    allDetails().then
+    allEntries()
   });
 
 // this will refresh the page
@@ -175,7 +171,7 @@ document
 
     event.preventDefault();
     fetch(deleteOneRoute, { method: "DELETE" }).then
-    resetHelper();
+    detailsLoop()
     console.log(`deleted ${idInput}`) 
   });
 
