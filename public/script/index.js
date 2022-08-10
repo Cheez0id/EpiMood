@@ -20,6 +20,7 @@ if (window.location.href == "http://localhost/") {
 
 //Displays all DB entries as 'cards' on the page
 const details = document.getElementById("result");
+
 function allEntries() {
   fetch(allRoute)
     .then((response) => response.json())
@@ -32,28 +33,37 @@ function allEntries() {
     Note: ${data[i].text} <br> Today's Mood: ${data[i].mood} <br> Episode Today?: ${data[i].episode} <br> 
   Private? ${data[i].makePrivate}`;
         details.append(entry);
+        
       }
 
       //  `Today's Mood: ${data[i].mood} <br>
       //  Private? ${data[i].makePrivate}`;
       //  console.log(data[0]);
       });
+      console.log('yay!')
 }
-//this is currently what I'm working on; need to primisify the thingy to get rid of the old cards first
-// function detailsLoop(){
-//   for (let i=0; i<details.children.length; i++){
-//     details.remove(i)
-//   }
-// }
+
+function detailsLoop(){
+  console.log(details.children.length);
+    
+  for (let i=0; i < details.children.length; i++){
+    console.log(details.children[i]);
+     details.removeChild[i]
+  }
+  
+}
+
+async function allDetails(){
+await detailsLoop()
+}
 
 document
   .getElementById("viewAllEntries")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    console.log(details.children.length);
-    // detailsLoop();
-    allEntries()
-  });
+    allDetails().then
+    allEntries();
+ });
 
 function selectedMood() {
   let ele = document.getElementsByName("moodToday");
