@@ -24,7 +24,7 @@ const details = document.getElementById("result");
 function allEntries() {
   fetch(allRoute)
     .then((response) => response.json())
-       .then(function (data) {
+    .then(function (data) {
       for (let i = 0; i < data.length; i++) {
         let entry = document.createElement("p");
         entry.className = "card";
@@ -33,38 +33,42 @@ function allEntries() {
     Note: ${data[i].text} <br> Today's Mood: ${data[i].mood} <br> Episode Today?: ${data[i].episode} <br> 
   Private? ${data[i].makePrivate}`;
         details.append(entry);
-        
       }
 
       //  `Today's Mood: ${data[i].mood} <br>
       //  Private? ${data[i].makePrivate}`;
       //  console.log(data[0]);
-      });
-      console.log('yay!')
+    });
+  console.log("yay!");
 }
 
-function detailsLoop(){
+//a function to remove the cards from the details section
+function detailsLoop() {
   console.log(details.children.length);
+  // for (let i = 0; i <= details.children.length; i++) {
+  //   console.log(details.children[i]);
     
-  for (let i=0; i < details.children.length; i++){
-    console.log(details.children[i]);
-     details.children[i].remove()
-  }
-  
+  details.innerHTML = '';
 }
 
-async function allDetails(){
-await detailsLoop()
+//making a promise of the above
+async function allDetails() {
+  await detailsLoop();
 }
 
+//a function to call remove cards then show all entries
 document
   .getElementById("viewAllEntries")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    if (details.children.length !== 0)
-    allDetails().then
+    if (details.children.length !== 0) 
+    allDetails().then;
     allEntries();
- });
+  });
+
+
+
+
 
 function selectedMood() {
   let ele = document.getElementsByName("moodToday");
