@@ -56,14 +56,22 @@ async function allDetails() {
   await detailsLoop();
 }
 
+//reset helper function
+function resetDetails(){
+  if (details.children.length !== 0) 
+    allDetails().then;
+    allEntries();
+}
+async function resetHelper() {
+  await resetDetails();
+}
+
 //a function to call remove cards then show all entries
 document
   .getElementById("viewAllEntries")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    if (details.children.length !== 0) 
-    allDetails().then;
-    allEntries();
+    resetDetails();
   });
 
 
@@ -166,8 +174,9 @@ document
     }
 
     event.preventDefault();
-    fetch(deleteOneRoute, { method: "DELETE" }).then;
-    console.log(`deleted ${idInput}`);
+    fetch(deleteOneRoute, { method: "DELETE" }).then
+    resetHelper();
+    console.log(`deleted ${idInput}`) 
   });
 
 // ------------------------------- IGNORE BELOW, IT'S REFERENCE CODE----------------------//
