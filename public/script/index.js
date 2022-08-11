@@ -149,12 +149,12 @@ document
 
 //DELETE ONE and refresh details section
 // delete one including a prompt
-let deletOneRoute = "";
-let idInput = document.getElementById("idInput").value;
+
 document
   .getElementById("deleteOne")
   .addEventListener("click", function () {
-    
+    let deletOneRoute = "";
+let idInput = document.getElementById("idInput").value;
     let deleteLocalOne = `http://localhost:80/deleteEntry/${idInput}`;
     let deleteDeployedOne = `https://epimoodtracker.herokuapp.com/deleteEntry/${idInput}`;
     if (window.location.href == "http://localhost/") {
